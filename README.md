@@ -19,49 +19,49 @@ direction = [NORTH, SOUTH, EAST, WEST]
 
 ### `Test Cases'
 
-MOVE
-MOVE
+MOVE<br>
+MOVE<br>
 MOVE
 
 Result: Game does not run
 
-PLACE 1,1,WEST
-PLACE 2,2,EAST
-PLACE 5,5,NORTH
-PLACE 59,59,NORTH
-MOVE
+PLACE 1,1,WEST<br>
+PLACE 2,2,EAST<br>
+PLACE 5,5,NORTH<br>
+PLACE 59,59,NORTH<br>
+MOVE<br>
 MOVE
 
 Result: column 4, row 2, East direction
 
 
-PLACE 5,10,EAST
-MOVE
-MOVE
+PLACE 5,10,EAST<br>
+MOVE<br>
+MOVE<br>
 PLACE 2,2,EAST
 
 Result: column 2, row 2, EAST
 
-PLACE 1,2,EAST
-MOVE
-MOVE
-MOVE
-MOVE
-MOVE
-MOVE
-LEFT
-LEFT
-MOVE
-MOVE
+PLACE 1,2,EAST<br>
+MOVE<br>
+MOVE<br>
+MOVE<br>
+MOVE<br>
+MOVE<br>
+MOVE<br>
+LEFT<br>
+LEFT<br>
+MOVE<br>
+MOVE<br>
 MOVE
 
 Result: column 1, row 2, WEST
 
-PLACE 1,1,NORTH
-LEFT
-LEFT
-MOVE
-RIGHT
+PLACE 1,1,NORTH<br>
+LEFT<br>
+LEFT<br>
+MOVE<br>
+RIGHT<br>
 MOVE
 
 Result: column 0, row 0, WEST
