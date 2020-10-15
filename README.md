@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the robot game, where the robot can be placed anywhere in a 5 x 5 grid. The robot will skip commands that are invalid and run only valid commands. First command will be the first PLACE command that is valid, otherwise the robot will not move. The robot location is indicated by the yellow square. Every second the robot will follow a command. REPORT command makes the robot stay at the current location for one second more.
+Rows and columns are zero indexed, where 0,0 starts in the bottom left.
 
-## Available Scripts
+## Valid commands
 
-In the project directory, you can run:
+x = column of the grid
+y = row of the grid
+direction = [NORTH, SOUTH, EAST, WEST]
 
-### `npm start`
+1. PLACE x,y,direction
+2. MOVE
+3. REPORT
+4. LEFT
+5. RIGHT
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Test Cases'
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+MOVE
+MOVE
+MOVE
 
-### `npm test`
+Result: Game does not run
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+PLACE 1,1,WEST
+PLACE 2,2,EAST
+PLACE 5,5,NORTH
+PLACE 59,59,NORTH
+MOVE
+MOVE
 
-### `npm run build`
+Result: column 4, row 2, East direction
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+PLACE 5,10,EAST
+MOVE
+MOVE
+PLACE 2,2,EAST
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Result: column 2, row 2, EAST
 
-### `npm run eject`
+PLACE 1,2,EAST
+MOVE
+MOVE
+MOVE
+MOVE
+MOVE
+MOVE
+LEFT
+LEFT
+MOVE
+MOVE
+MOVE
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Result: column 1, row 2, WEST
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+PLACE 1,1,NORTH
+LEFT
+LEFT
+MOVE
+RIGHT
+MOVE
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Result: column 0, row 0, WEST
