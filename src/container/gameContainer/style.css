@@ -1,0 +1,10 @@
+.game-container {
+    display: flex;
+  }
+  
+.game-command-input {
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
