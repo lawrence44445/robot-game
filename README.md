@@ -1,6 +1,10 @@
 This is the robot game, where the robot can be placed anywhere in a 5 x 5 grid. The robot will skip commands that are invalid and run only valid commands. First command will be the first PLACE command that is valid, otherwise the robot will not move. The robot location is indicated by the yellow square. Every second the robot will follow a command. REPORT command makes the robot stay at the current location for one second more.
 Rows and columns are zero indexed, where 0,0 starts in the bottom left.
 
+## Demo
+
+https://codesandbox.io/s/priceless-greider-5oii3
+
 ## Valid commands
 
 x = column of the grid
